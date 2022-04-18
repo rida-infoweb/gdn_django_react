@@ -19,6 +19,23 @@ class ChefFiliereViewSet(viewsets.ModelViewSet):
         elif Etudiant.objects.filter(user=self.request.user):
             return self.queryset.filter(etudiant__user=self.request.user)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
 class EnseignantViewSet(viewsets.ModelViewSet):
     serializer_class = EnseignantSerializer
     queryset = Enseignant.objects.all()

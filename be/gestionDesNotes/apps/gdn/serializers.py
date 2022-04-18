@@ -18,6 +18,7 @@ class MatiereSerializer(serializers.ModelSerializer):
         model = Matiere
         fields = '__all__'
 class NoteSerializer(serializers.ModelSerializer):
+    matiere_libele = serializers.CharField(source='matiere.libele')
     class Meta:
         model = Note
-        fields = '__all__'
+        fields = ('id', 'date', 'etudiant','matiere_libele','note')
